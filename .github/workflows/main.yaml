@@ -1,6 +1,6 @@
 name: demos
 run-name: parul is running this 
-on: [workflow_dispatch]
+on: push
 
 jobs:
   hello-world:
