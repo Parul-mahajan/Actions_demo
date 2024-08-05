@@ -29,12 +29,15 @@ jobs:
         path: local-action-repo
     - name: Run Local Action
       uses: ./local-action-repo
-    - name: Using reusable template
+  
+
+  using_reusable_template:
+      needs: recapping_day_1
       uses: Parul-mahajan/Local-action/.github/workflows/reusable_workflow.yaml@main
       with:
         param1: 'Hello, world!'
-
-
+  
+  
         
   
       
