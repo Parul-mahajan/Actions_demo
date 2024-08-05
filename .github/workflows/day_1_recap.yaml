@@ -20,9 +20,13 @@ jobs:
       run: echo "Ran a script in ${{github.ref}} for persona ${{matrix.names}}"
     - name: Access repository (using actions)
       uses: actions/checkout@v4
+    - name: Checkout local action repository
+      uses: actions/checkout@v4
+      with:
+        repository: Parul-mahajan/Local-action
+        path: local-action-repo
     - name: Run Local Action
-      uses: https://github.com/Parul-mahajan/Local-action/blob/main/action.yml
-    
+      uses: ./local-action-repo/local-action
     
       
     
