@@ -18,8 +18,7 @@ jobs:
         names: [ john, doe, persona ]
     steps:
     - name: Running a script
-      run: |
-        echo "Ran a script in ${{github.ref}} for persona ${{matrix.names}}"
+      run: echo "Ran a script in ${{github.ref}} for persona ${{matrix.names}}"
     - name: Access repository (using actions)
       uses: actions/checkout@v4
     - name: Checkout local action repository
