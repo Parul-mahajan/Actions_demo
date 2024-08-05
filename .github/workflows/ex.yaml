@@ -11,6 +11,7 @@ on:
 jobs:
   recapping_day_1:
     runs-on: ubuntu-latest
+
     environment: Dev
     strategy:
       matrix: 
@@ -30,7 +31,31 @@ jobs:
         uses: ./local-action-repo
 
   using_reusable_template:
+
+
     needs: recapping_day_1
     uses: Parul-mahajan/Local-action/.github/workflows/reusable_workflow.yaml@main
     with:
       param1: 'Hello, world!'
+
+
+
+
+
+
+steps:
+      - name: Running a script
+        run: |
+          echo "Ran a script in ${{github.ref}} for persona ${{matrix.names}}"
+      - name: Access repository (using actions)
+        uses: actions/checkout@v4
+      - name: Checkout local action repository
+        uses: actions/checkout@v4
+        with:
+          repository: Parul-mahajan/Local-action
+          path: local-action-repo
+      - name: Run Local Action
+        uses: ./local-action-repo
+
+
+
