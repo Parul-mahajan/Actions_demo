@@ -30,7 +30,7 @@ jobs:
     - name: Run Local Action
       uses: ./local-action-repo
     - name: Using reusable template
-      uses: https://github.com/Parul-mahajan/Local-action/blob/main/.github/workflows/reusable_workflow.yaml
+      uses: Parul-mahajan/Local-action/.github/workflows/reusable_workflow.yaml
       with:
         param1: 'Hello, world!'
 
