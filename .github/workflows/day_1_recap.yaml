@@ -20,8 +20,6 @@ jobs:
     - name: Running a script
       run: |
         echo "Ran a script in ${{github.ref}} for persona ${{matrix.names}}"
-        echo "New environment varible ${{secrets.PERSONA}}"
-        
     - name: Access repository (using actions)
       uses: actions/checkout@v4
     - name: Checkout local action repository
