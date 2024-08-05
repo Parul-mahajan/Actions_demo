@@ -26,7 +26,7 @@ jobs:
         repository: Parul-mahajan/Local-action
         path: local-action-repo
     - name: Run Local Action
-      uses: ./local-action-repo/local-action
+      uses: ./local-action-repo
     
       
     
