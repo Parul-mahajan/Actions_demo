@@ -12,13 +12,13 @@ on:
 jobs:
   recapping_day_1:
     runs-on: ubuntu-latest
-    environment: Dev
+    environment: Prod
     strategy:
       matrix: 
         names: [john, doe, persona]
     steps:
       - name: Running a script
-        run: echo "Ran a script in ${{ github.ref }} for persona ${{ matrix.names }}"
+        run: echo "Ran a script in ${{ github.ref }} for persona ${{ matrix.names }} , variable ${{secrets.DAY}}, secret ${{secrets.DATE}}"
       - name: Access repository (using actions)
         uses: actions/checkout@v4
     
